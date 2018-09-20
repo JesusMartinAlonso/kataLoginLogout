@@ -1,6 +1,6 @@
 //
-//  Kata_Login_LogoutUITests.swift
-//  Kata Login LogoutUITests
+//  kataLoginLogoutUITests.swift
+//  kataLoginLogoutUITests
 //
 //  Created by Jesus Martin Alonso on 20/9/18.
 //  Copyright © 2018 Aiwin. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Kata_Login_LogoutUITests: XCTestCase {
+class kataLoginLogoutUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
