@@ -8,9 +8,37 @@
 
 import Foundation
 
+enum LoginError : Error {
+    
+    case usernameWithInvalidCharacters
+    
+}
+
+
+
 class KataApp {
     
-    func login(username : String, password : String) -> Bool {
+    var clock : Clock
+    
+    init(clock : Clock) {
+        self.clock = clock
+    }
+    
+    init(){
+        self.clock = Clock()
+    }
+    
+
+    
+    func login(username : String, password : String) throws -> Bool {
+        
+        let invalidLetters : CharacterSet = [",", ".", ";"]
+        
+        let range = username.rangeOfCharacter(from: invalidLetters )
+        
+        if range != nil {
+            throw LoginError.usernameWithInvalidCharacters
+        }
         
         if username == "admin", password == "admin" {
             
@@ -23,4 +51,13 @@ class KataApp {
     }
     
     
+    func logout() -> Bool{
+        
+        return Int(clock.now.timeIntervalSince1970) % 2 == 0
+
+    }
+    
 }
+
+
+

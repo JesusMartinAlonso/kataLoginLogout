@@ -14,9 +14,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
+    @IBOutlet weak var loginView: UIView!
+    
+    @IBOutlet weak var logoutButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logoutButton.isHidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -31,17 +37,44 @@ class LoginViewController: UIViewController {
     
     @IBAction func doLogin() {
         
-        
-        if KataApp().login(username: usernameTextField.text!, password: passwordTextField.text!) {
-        
-            showAlert(title: "Congratulations", message: "Login successfull", button: "OK")
-            
-        }else{
-            showAlert(title: "Error", message: "Login fails", button: "OK")
+        do {
+            if try KataApp().login(username: usernameTextField.text!, password: passwordTextField.text!) {
+                
+                showAlert(title: "Congratulations", message: "Login successfull", button: "OK")
+                
+                loginView.isHidden = true
+                logoutButton.isHidden = false
+                
+            }else{
+                showAlert(title: "Error", message: "Login fails", button: "OK")
+            }
+        } catch LoginError.usernameWithInvalidCharacters{
+            showAlert(title: "Error", message: "Username with invalid characters", button: "OK")
+        } catch {
+            print("Another error")
         }
+        
+        
+       
+        
+        
         
     }
     
+    @IBAction func doLogOut() {
+        
+        if KataApp().logout() {
+            
+            loginView.isHidden = false
+            logoutButton.isHidden = true
+            
+            
+        }else {
+            showAlert(title: "Error", message: "Cannot logout", button: "Try again")
+        }
+        
+        
+    }
     
     //MARK: - Private functions
     

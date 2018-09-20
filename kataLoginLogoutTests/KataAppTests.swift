@@ -14,11 +14,14 @@ class KataAppTests: XCTestCase {
     
     var kataApp : KataApp!
     
+    var clockMock : ClockMock!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         kataApp = KataApp()
-        
+        clockMock = ClockMock()
+        kataApp.clock = clockMock
     }
     
     override func tearDown() {
@@ -29,16 +32,77 @@ class KataAppTests: XCTestCase {
    
     func testLoginFails(){
         
-        XCTAssertFalse(kataApp.login(username: "asd", password: "admin"))
+        XCTAssertFalse(try! kataApp.login(username: "asd", password: "admin"))
         
     }
     
     func testLoginSuccess(){
         
-        XCTAssertTrue(kataApp.login(username: "admin", password: "admin"))
+        XCTAssertTrue(try! kataApp.login(username: "admin", password: "admin"))
+        
+    }
+    
+    
+    func test_login_username_invalid_character_is_point(){
+        
+        XCTAssertThrowsError(try kataApp.login(username: "admin.", password: "asd"))
+        
+    
+    }
+    
+    func test_login_username_invalid_character_is_comma(){
+        
+        XCTAssertThrowsError(try kataApp.login(username: "admin,", password: "asd")){
+            error in
+            
+            guard let _ = error as? LoginError else {
+                XCTFail()
+                return
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    func test_login_username_invalid_character_is_semicolon(){
+        
+        XCTAssertThrowsError(try kataApp.login(username: "admin;", password: "asd"))
+        
         
     }
     
     
     
+    func test_logout_current_second_is_pair(){
+        givenNowIs(Date(timeIntervalSince1970: 2))
+        
+        XCTAssertTrue(kataApp.logout())
+        
+    }
+    
+    func test_logout_current_second_is_odd(){
+         givenNowIs(Date(timeIntervalSince1970: 1))
+        
+         XCTAssertFalse(kataApp.logout())
+    }
+    
+    
+    private func givenNowIs(_ date: Date){
+        clockMock.mockedNow = date
+    }
 }
+
+class ClockMock : Clock {
+    
+    var mockedNow : Date = Date()
+    
+    override var now: Date {
+        return mockedNow
+    }
+    
+}
+
+
+

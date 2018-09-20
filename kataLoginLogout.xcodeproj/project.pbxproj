@@ -16,6 +16,7 @@
 		2DA8F8022153DE08004E8B01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8012153DE08004E8B01 /* LoginViewController.swift */; };
 		2DA8F8042153E0B4004E8B01 /* KataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8032153E0B4004E8B01 /* KataApp.swift */; };
 		2DA8F8062153E19D004E8B01 /* KataAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8052153E19D004E8B01 /* KataAppTests.swift */; };
+		2DA8F8082153E6E6004E8B01 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8072153E6E6004E8B01 /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2DA8F8012153DE08004E8B01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DA8F8032153E0B4004E8B01 /* KataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataApp.swift; sourceTree = "<group>"; };
 		2DA8F8052153E19D004E8B01 /* KataAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataAppTests.swift; sourceTree = "<group>"; };
+		2DA8F8072153E6E6004E8B01 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				2D6419E92153D8C900DCBE71 /* Info.plist */,
 				2DA8F8012153DE08004E8B01 /* LoginViewController.swift */,
 				2DA8F8032153E0B4004E8B01 /* KataApp.swift */,
+				2DA8F8072153E6E6004E8B01 /* Clock.swift */,
 			);
 			path = kataLoginLogout;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				2DA8F8022153DE08004E8B01 /* LoginViewController.swift in Sources */,
 				2DA8F8042153E0B4004E8B01 /* KataApp.swift in Sources */,
+				2DA8F8082153E6E6004E8B01 /* Clock.swift in Sources */,
 				2D6419DE2153D8C900DCBE71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
