@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2D6419DE2153D8C900DCBE71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6419DD2153D8C900DCBE71 /* AppDelegate.swift */; };
-		2D6419E02153D8C900DCBE71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6419DF2153D8C900DCBE71 /* ViewController.swift */; };
 		2D6419E32153D8C900DCBE71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6419E12153D8C900DCBE71 /* Main.storyboard */; };
 		2D6419E52153D8C900DCBE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6419E42153D8C900DCBE71 /* Assets.xcassets */; };
 		2D6419E82153D8C900DCBE71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6419E62153D8C900DCBE71 /* LaunchScreen.storyboard */; };
 		2D6419F32153D8C900DCBE71 /* kataLoginLogoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6419F22153D8C900DCBE71 /* kataLoginLogoutTests.swift */; };
 		2D6419FE2153D8C900DCBE71 /* kataLoginLogoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6419FD2153D8C900DCBE71 /* kataLoginLogoutUITests.swift */; };
+		2DA8F8022153DE08004E8B01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8012153DE08004E8B01 /* LoginViewController.swift */; };
+		2DA8F8042153E0B4004E8B01 /* KataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8032153E0B4004E8B01 /* KataApp.swift */; };
+		2DA8F8062153E19D004E8B01 /* KataAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8F8052153E19D004E8B01 /* KataAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		2D6419DA2153D8C900DCBE71 /* kataLoginLogout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kataLoginLogout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6419DD2153D8C900DCBE71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D6419DF2153D8C900DCBE71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D6419E22153D8C900DCBE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D6419E42153D8C900DCBE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6419E72153D8C900DCBE71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		2D6419F92153D8C900DCBE71 /* kataLoginLogoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kataLoginLogoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6419FD2153D8C900DCBE71 /* kataLoginLogoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kataLoginLogoutUITests.swift; sourceTree = "<group>"; };
 		2D6419FF2153D8C900DCBE71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA8F8012153DE08004E8B01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DA8F8032153E0B4004E8B01 /* KataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataApp.swift; sourceTree = "<group>"; };
+		2DA8F8052153E19D004E8B01 /* KataAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				2D6419DD2153D8C900DCBE71 /* AppDelegate.swift */,
-				2D6419DF2153D8C900DCBE71 /* ViewController.swift */,
 				2D6419E12153D8C900DCBE71 /* Main.storyboard */,
 				2D6419E42153D8C900DCBE71 /* Assets.xcassets */,
 				2D6419E62153D8C900DCBE71 /* LaunchScreen.storyboard */,
 				2D6419E92153D8C900DCBE71 /* Info.plist */,
+				2DA8F8012153DE08004E8B01 /* LoginViewController.swift */,
+				2DA8F8032153E0B4004E8B01 /* KataApp.swift */,
 			);
 			path = kataLoginLogout;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		2D6419F12153D8C900DCBE71 /* kataLoginLogoutTests */ = {
 			isa = PBXGroup;
 			children = (
+				2DA8F8052153E19D004E8B01 /* KataAppTests.swift */,
 				2D6419F22153D8C900DCBE71 /* kataLoginLogoutTests.swift */,
 				2D6419F42153D8C900DCBE71 /* Info.plist */,
 			);
@@ -256,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6419E02153D8C900DCBE71 /* ViewController.swift in Sources */,
+				2DA8F8022153DE08004E8B01 /* LoginViewController.swift in Sources */,
+				2DA8F8042153E0B4004E8B01 /* KataApp.swift in Sources */,
 				2D6419DE2153D8C900DCBE71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA8F8062153E19D004E8B01 /* KataAppTests.swift in Sources */,
 				2D6419F32153D8C900DCBE71 /* kataLoginLogoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
